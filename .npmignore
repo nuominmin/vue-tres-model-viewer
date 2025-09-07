@@ -1,0 +1,42 @@
+# Source files
+src/
+examples/
+docs/
+
+# Development files
+.vscode/
+.idea/
+*.log
+.DS_Store
+
+# Build tools
+vite.config.ts
+tsconfig.json
+tsconfig.node.json
+.eslintrc.js
+.prettierrc
+
+# Git
+.git/
+.gitignore
+
+# CI/CD
+.github/
+.travis.yml
+.circleci/
+
+# Testing
+tests/
+test/
+__tests__/
+*.test.*
+*.spec.*
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Misc
+node_modules/
+*.tgz
+*.tar.gz
