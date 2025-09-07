@@ -1043,10 +1043,11 @@ const applyTexturesToMaterial = (material: THREE.Material, materialIndex: number
   }
   
   // 如果材质已经有贴图，检查是否需要替换
-  if (material.map && material.map.image?.src) {
-    console.log(`材质已有贴图: ${material.map.image.src}`);
+  const meshMaterial = material as any;
+  if (meshMaterial.map && meshMaterial.map.image?.src) {
+    console.log(`材质已有贴图: ${meshMaterial.map.image.src}`);
     // 如果贴图加载失败，尝试替换
-    if (!material.map.image.complete || material.map.image.naturalWidth === 0) {
+    if (!meshMaterial.map.image.complete || meshMaterial.map.image.naturalWidth === 0) {
       console.log('贴图加载失败，尝试替换...');
       replaceTexture(material, materialIndex, meshName);
     }
@@ -1158,16 +1159,6 @@ const findTexturesForMaterial = (material: THREE.Material, materialIndex: number
   textureAnalysis.forEach(t => {
     console.log(`  ${t.source} -> ${t.analysis.channel} (置信度: ${t.analysis.confidence})`);
   });
-  
-  // 按通道类型分组贴图
-  const texturesByChannel = {
-    baseColor: textureAnalysis.filter(t => t.analysis.channel === 'baseColor'),
-    opacity: textureAnalysis.filter(t => t.analysis.channel === 'opacity'),
-    normal: textureAnalysis.filter(t => t.analysis.channel === 'normal'),
-    roughness: textureAnalysis.filter(t => t.analysis.channel === 'roughness'),
-    specular: textureAnalysis.filter(t => t.analysis.channel === 'specular'),
-    metalness: textureAnalysis.filter(t => t.analysis.channel === 'metalness')
-  };
   
   // 材质类型分析
   const materialAnalysis = analyzeMaterialType(material, meshName);

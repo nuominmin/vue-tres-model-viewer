@@ -20,11 +20,7 @@ Vue 3 3D模型查看器组件，基于 TresJS 和 Three.js 构建。支持 FBX �
 ## 📦 安装
 
 ```bash
-npm install vue-tres-model-viewer
-# 或者
-yarn add vue-tres-model-viewer
-# 或者
-pnpm add vue-tres-model-viewer
+npm install https://github.com/nuominmin/vue-tres-model-viewer.git
 ```
 
 ### 对等依赖
