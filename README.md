@@ -7,7 +7,6 @@
 
 Vue 3 3D模型查看器组件，基于 TresJS 和 Three.js 构建。支持 FBX 格式，提供贴图映射、材质控制和光照调节功能。
 
-> 🚀 **在线演示**: [即将推出](https://nuominmin.github.io/vue-tres-model-viewer)
 
 ## 📸 效果预览
 
@@ -16,12 +15,6 @@ Vue 3 3D模型查看器组件，基于 TresJS 和 Three.js 构建。支持 FBX �
 
 ### 3D模型预览效果
 ![3D模型预览效果](./README_2.png)
-
-## 📦 安装
-
-```bash
-npm install https://github.com/nuominmin/vue-tres-model-viewer.git
-```
 
 ### 对等依赖
 
@@ -257,16 +250,6 @@ npm run type-check
 npm run lint
 ```
 
-## 🤝 贡献
-
-欢迎贡献代码！请随时提交 Pull Request。
-
-1. Fork 仓库
-2. 创建功能分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 打开 Pull Request
-
 ## 📄 许可证
 
 本项目基于 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
@@ -284,7 +267,3 @@ npm run lint
 1. 查看 [文档](https://github.com/nuominmin/vue-tres-model-viewer#readme)
 2. 搜索 [现有问题](https://github.com/nuominmin/vue-tres-model-viewer/issues)
 3. 创建 [新问题](https://github.com/nuominmin/vue-tres-model-viewer/issues/new)
-
----
-
-用 ❤️ 制作 by [nuominmin](https://github.com/nuominmin)
